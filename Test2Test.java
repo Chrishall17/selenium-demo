@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class TodoE2ETest {
+public class Test2Test {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
@@ -37,28 +37,8 @@ public class TodoE2ETest {
     driver.quit();
   }
   @Test
-  public void todoE2E() {
-    // Test name: TodoE2E
+  public void test2() {
+    // Test name: Test2
     // Step # | name | target | value
-    // 1 | open | https://todomvc.com/ | 
-    driver.get("https://todomvc.com/");
-    // 2 | setWindowSize | 1171x802 | 
-    driver.manage().window().setSize(new Dimension(1171, 802));
-    // 3 | click | linkText=React | 
-    driver.findElement(By.linkText("React")).click();
-    // 4 | click | css=.destroy | 
-    driver.findElement(By.cssSelector(".destroy")).click();
-    // 5 | click | css=.new-todo | 
-    driver.findElement(By.cssSelector(".new-todo")).click();
-    // 6 | type | css=.new-todo | Buy some milk
-    driver.findElement(By.cssSelector(".new-todo")).sendKeys("Buy some milk");
-    // 7 | sendKeys | css=.new-todo | ${KEY_ENTER}
-    driver.findElement(By.cssSelector(".new-todo")).sendKeys(Keys.ENTER);
-    // 8 | type | xpath=//input | Buy some milk
-    driver.findElement(By.xpath("//input")).sendKeys("Buy some milk");
-    // 9 | sendKeys | css=.new-todo | ${KEY_ENTER}
-    driver.findElement(By.cssSelector(".new-todo")).sendKeys(Keys.ENTER);
-    // 10 | click | css=.toggle | 
-    driver.findElement(By.cssSelector(".toggle")).click();
   }
 }

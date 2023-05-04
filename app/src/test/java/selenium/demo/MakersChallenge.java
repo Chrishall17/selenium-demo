@@ -36,11 +36,18 @@ public class MakersChallenge {
         assertEquals("https://makers.tech/code-of-conduct/", URL);
         WebElement homepage = driver.findElement(By.cssSelector("#header > div > a"));
         homepage.click();
+    }
+    @Test
+    void secondChallengeTest() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.get("https://makers.tech");
         WebElement FAQS = driver.findElement(By.cssSelector("#menu-item-1195 > a"));
         FAQS.click();
         String URL2 = driver.getCurrentUrl();
         assertEquals("https://faq.makers.tech/en/knowledge", URL2);
-        WebElement searchBox = driver.findElement(By.cssSelector("body > header > div.kb-search-section.kb-search-section--full.kb-search-section-with-image > div > div > div.kb-search__box > div > form > input"));
+//        WebElement searchBox = driver.findElement(By.cssSelector("body > header > div.kb-search-section.kb-search-section--full.kb-search-section-with-image > div > div > div.kb-search__box > div > form > input"));
+        WebElement mainHeader = driver.findElement(By.className("kb-search__box"));
+        WebElement searchBox = mainHeader.findElement(By.className("kb-search__input"));
         searchBox.sendKeys("badger");
         searchBox.sendKeys(Keys.ENTER);
         WebElement badgerResults = driver.findElement(By.cssSelector("#hsresults > p:nth-child(1)"));
