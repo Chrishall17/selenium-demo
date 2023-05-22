@@ -2,14 +2,7 @@ package selenium.demo;
 
 // in MakersSearchPage.java
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+ass
 
 public class MakersSearchPage {
     protected WebDriver driver;
